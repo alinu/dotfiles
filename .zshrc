@@ -116,4 +116,7 @@ alias update="sudo apt update && sudo apt upgrade && sudo apt autoremove"
 alias ls="ls -lahG"
 alias df="df -h"
 
+alias raspy="ssh almeds@raspy"
+
+alias raspy="ssh almeds@mediadebian"
 
