@@ -103,6 +103,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# user added
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
@@ -112,11 +113,21 @@ export PATH="$HOME/.local/bin:$PATH"
 alias whatsfucked="sudo systemctl --failed"
 alias cat="batcat"
 alias bat="batcat"
-alias update="sudo apt update && sudo apt upgrade && sudo apt autoremove"
-alias ls="ls -lahG"
+
+#debian and ubuntu and mint
+#alias update="sudo apt update && sudo apt upgrade && sudo apt autoremove"
+
+#arch
+alias pacup="sudo pacman -Syuu"
+alias parup="paru update"
+alias ls="ls -al"
 alias df="df -h"
 
+#ssh
 alias raspy="ssh almeds@raspy"
+alias mediadebian="ssh almeds@mediadebian"
 
-alias raspy="ssh almeds@mediadebian"
+#zoxide
+
+eval "$(zoxide init zsh)"
 
