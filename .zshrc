@@ -103,6 +103,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+
 # user added
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -111,23 +112,26 @@ export NVM_DIR="$HOME/.nvm"
 export PATH="$HOME/.local/bin:$PATH"
 
 alias whatsfucked="sudo systemctl --failed"
-alias cat="batcat"
-alias bat="batcat"
-
+alias cat="bat"
+alias bat="bat"
+alias cd="z"
+alias zshcon="nvim $HOME/.zshrc"
+alias zshsouce="source $HOME/.zshrc"
 #debian and ubuntu and mint
 #alias update="sudo apt update && sudo apt upgrade && sudo apt autoremove"
 
 #arch
 alias pacup="sudo pacman -Syuu"
-alias parup="paru update"
-alias ls="ls -al"
+alias parup="paru -Syuu"
+alias ls="ls -l"
 alias df="df -h"
-
+alias devnow="z /mnt/nvme_data/projects; ls -al"
 #ssh
-alias raspy="ssh almeds@raspy"
+alias raspy="ssh alin@raspyclw"
 alias mediadebian="ssh almeds@mediadebian"
 
 #zoxide
 
 eval "$(zoxide init zsh)"
 
+  curl -s ipinfo.io | jq --raw-output '.country, .region'
